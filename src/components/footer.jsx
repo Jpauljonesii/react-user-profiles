@@ -2,6 +2,6 @@ import React from 'react'
 
 export default function footer() {
   return (
-    <div>footer</div>
+    <footer><p>&copy;John P. Jones II</p></footer>
   )
 }

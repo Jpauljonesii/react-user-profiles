@@ -1,24 +1,29 @@
 import { useState } from 'react';
 import './styles/App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Main from './components/Main';
-import Header from './components/Header';
-import Footer from './components/Footer'
+import Main from './components/main';
+import Header from './components/header';
+import Footer from './components/footer';
+
 
 
 function App() {
-  const [profileData, setprofileData] = useState([]);
+  const [profile, setProfile] = useState([]);
   
+ function displayProfile (event) {
+  event.preventDefault();
+  setProfile(event.target.value);
+ }
+
   return (
-    <>
-    <header>
-      <h1>User Profiles</h1>
-    </header>
-    <main>
-      <Main/>
-    </main>
-    <footer><p>&copy;John P. Jones II</p></footer>
-    </>
+  
+   <>
+   <Header profile={profile}/>
+   <Main profile={profile}/>
+   <Footer profile={profile}/>
+   
+   </>
+  
   )
 }
 
