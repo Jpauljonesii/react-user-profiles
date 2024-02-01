@@ -9,7 +9,7 @@ export default function Main() {
 
 return (
 
-<div>
+<div className='border border-5'>
 <UserList/>
    
 </div>
