@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-
+import UserProfile from './UserProfile';
 
 export default function UserList() {
     const [state, setState] = useState([]);
@@ -16,16 +16,12 @@ export default function UserList() {
   
   const users = state.map((user, index) => {
       return (
-          <div key={index}>
-              <h3>{user.name}</h3>
-              <h3>{user.phone}</h3>
-              <h3>{user.email}</h3>
-          </div>
+        <UserProfile key={index} name={user.name} phone={user.phone} email={user.email} /> 
       );
   });
     return (
     
-      <main>
+      <main className='p-2 m-3 bg-secondary'>
         <h2>{users} </h2>
       </main>
     

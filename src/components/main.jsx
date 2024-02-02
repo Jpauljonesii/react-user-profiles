@@ -9,7 +9,7 @@ export default function Main() {
 
 return (
 
-<div className='border border-5'>
+<div className='bg-dark border-dark border-5 mt-5 p-5'>
 <UserList/>
    
 </div>
